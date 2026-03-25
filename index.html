@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Formulario de Inscripción</title>
+</head>
+
+<img src="mirandaIMG.jpg" 
+     alt="Encabezado Registro" 
+     style="width: 100%; height: 250px; object-fit: cover; display: block;">
+
+
+<h2>Formulario de Inscripción</h2>
+
+<form>
+
+    <label>Tipo de Documento:</label><br>
+    <select required>
+        <option value="">Seleccione</option>
+        <option>Cédula</option>
+        <option>Tarjeta de Identidad</option>
+        <option>Pasaporte</option>
+    </select><br><br>
+
+    <label>Número de Documento:</label><br>
+    <input type="text" required pattern="[0-9]{6,12}"><br><br>
+
+    <label>Nombres:</label><br>
+    <input type="text" required minlength="3" maxlength="64"
+    pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]{3,64}"><br><br>
+
+    <label>Apellidos:</label><br>
+    <input type="text" required minlength="3" maxlength="64"
+    pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]{3,64}"><br><br>
+
+    <label>Dirección:</label><br>
+    <input type="text" required><br><br>
+
+    <label>Teléfono fijo:</label><br>
+    <input type="tel" required pattern="[0-9]{7}"><br><br>
+
+    <label>Teléfono celular:</label><br>
+    <input type="tel" required pattern="[0-9]{10}"><br><br>
+
+    <label>Correo electrónico:</label><br>
+    <input type="email" required
+    pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"><br><br>
+
+    <label>Usuario:</label><br>
+    <input type="text" required minlength="3" maxlength="16"
+    pattern="[A-Za-z]{3,14}[0-9]{0,2}"><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" required maxlength="16"
+    pattern="(?=(.*[A-Z]){1})(?=(.*[a-z]){2})(?=(.*[0-9]){5})[A-Za-z0-9!?\-+/&$]{16}"><br><br>
+
+    <label>Fecha de inscripción:</label><br>
+    <input type="date" required min="2024-02-15" max="2024-03-06"><br><br>
+
+    <label>Hobbies:</label><br>
+    <textarea></textarea><br><br>
+
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Limpiar">
+
+</form>
+
+</body>
+</html>
